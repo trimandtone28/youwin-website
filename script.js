@@ -163,3 +163,22 @@ contactForm?.addEventListener("submit", (event) => {
   contactForm.reset();
   window.location.href = mailtoUrl;
 });
+/* ===================================
+   MOBILE DROPDOWN
+=================================== */
+
+const dropdowns = document.querySelectorAll(".dropdown");
+
+dropdowns.forEach((dropdown) => {
+
+  const btn = dropdown.querySelector(".dropdown-btn");
+
+  btn.addEventListener("click", () => {
+
+    if (window.innerWidth <= 1024) {
+      dropdown.classList.toggle("active");
+    }
+
+  });
+
+});
