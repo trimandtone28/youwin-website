@@ -42,6 +42,9 @@ body {
   font-family: "Inter", "Segoe UI", sans-serif;
   text-rendering: optimizeLegibility;
 }
+main {
+  padding-top: 110px;
+}
 
 body.nav-open {
   overflow: hidden;
@@ -85,11 +88,13 @@ button {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 60;
-  padding: 12px 0;
-  background: #000000;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 16px 0;
+  background: rgba(0,0,0,0.96);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -104,12 +109,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  padding: 14px 24px;
+  gap: 42px;
+  padding: 18px 34px;
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 8px;
   background: rgba(0,0,0,0.95);
-  backdrop-filter: blur(18px);
+  backdrop-filter: none;
 }
 
 .site-header.is-scrolled .nav-shell {
@@ -334,17 +339,15 @@ button {
 .mega-panel {
   position: absolute;
   top: calc(100% + 14px);
-  left: 0;
-  width: min(950px, 78vw);
-  transform: translateY(12px);
+  left: 50%;
+  width: min(850px, 72vw);
+  max-width: calc(100vw - 40px);
+  transform: translateX(-50%) translateY(12px);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
-  transition:
-    opacity 240ms ease,
-    transform 240ms ease,
-    visibility 240ms ease;
+  z-index: 999;
+  overflow: hidden;
 }
 
 .mega-panel::before {
@@ -362,7 +365,6 @@ button {
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
 }
-
 .mega-panel-shell {
   display: grid;
   grid-template-columns: minmax(250px, 320px) minmax(0, 1fr);
@@ -371,7 +373,7 @@ button {
   border: 1px solid rgba(255,255,255,0.12);
   border-radius: 10px;
   background: rgba(0,0,0,0.92);
-  backdrop-filter: blur(18px);
+  backdrop-filter: none;
   box-shadow: 0 12px 30px rgba(0,0,0,0.45);
 }
 
@@ -675,7 +677,7 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 999px;
   background: rgba(5, 5, 5, 0.34);
-  backdrop-filter: blur(14px);
+  backdrop-filter: none;
 }
 
 .hero-content h1 {
@@ -753,7 +755,7 @@ button {
 
 .glass-card {
   padding: 28px;
-  backdrop-filter: blur(24px);
+  backdrop-filter: none;
 }
 
 .highlight-card span,
@@ -1167,7 +1169,7 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(10, 10, 12, 0.96);
     box-shadow: var(--shadow);
-    backdrop-filter: blur(22px);
+   backdrop-filter: none;
   }
 
   .site-nav.is-open {
@@ -1315,8 +1317,12 @@ button {
   }
 
   .glass-card {
-    padding: 22px;
-  }
+  padding: 28px;
+  backdrop-filter: none;
+  background: #000000;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: none;
+}
 
   .hero-description,
   .mega-panel-lead p,
