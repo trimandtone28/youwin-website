@@ -470,13 +470,17 @@ button {
 }
 
 .mega-panel-shell--nested {
-  grid-template-columns: 380px 1fr;
+  display: grid;
+  grid-template-columns: minmax(280px, 320px) minmax(0, 1fr);
+  gap: 20px;
+  width: 100%;
 }
 
 .mega-panel-nested {
   display: grid;
-  grid-template-columns: 260px 1fr;
+  grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
   gap: 20px;
+  width: 100%;
 }
 
 .mega-nav-submenu {
@@ -1437,4 +1441,71 @@ button {
 .mega-panel,
 .mega-detail-panel{
     border-radius:0 !important;
+}
+/* ==========================================
+   CAREERS DROPDOWN PERFECT FIX
+========================================== */
+
+.mega-nav-item:last-child .mega-panel {
+    left: auto !important;
+    right: 0 !important;
+    width: min(1050px, calc(100vw - 80px)) !important;
+}
+
+.mega-nav-item:last-child .mega-panel-shell {
+    width: 100%;
+    overflow: hidden;
+}
+
+.mega-nav-item:last-child .mega-panel-shell--nested {
+    grid-template-columns: 300px 1fr !important;
+    gap: 24px;
+}
+
+.mega-nav-item:last-child .mega-panel-lead {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.mega-nav-item:last-child .mega-panel-lead h3 {
+    font-size: 1.8rem;
+    line-height: 1.1;
+    word-break: break-word;
+}
+
+.mega-nav-item:last-child .mega-panel-lead p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.mega-nav-item:last-child .mega-panel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.mega-nav-item:last-child .mega-info-card,
+.mega-nav-item:last-child .mega-metric {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.mega-nav-item:last-child .mega-info-card span,
+.mega-nav-item:last-child .mega-metric span {
+    word-break: break-word;
+}
+
+.mega-panel {
+    overflow: visible;
+}
+
+.mega-panel-shell {
+    overflow: hidden;
+}
+
+/* Extra Chrome fix */
+@media (min-width: 1200px) {
+    .mega-nav-item:last-child .mega-panel-shell--nested {
+        grid-template-columns: 320px 1fr !important;
+    }
 }
