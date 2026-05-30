@@ -1393,3 +1393,48 @@ button {
 .mega-topic-pill {
   background: #000000 !important;
 }
+
+
+/* ===== FORCE SQUARE BLACK HEADER ===== */
+.site-header{
+    background: transparent !important;
+}
+
+.nav-shell{
+    background:#000000 !important;
+    border-radius:0 !important;
+    border:1px solid #111 !important;
+    backdrop-filter:none !important;
+    box-shadow:none !important;
+}
+
+.site-header.is-scrolled .nav-shell{
+    background:#000000 !important;
+    border-color:#111 !important;
+}
+
+.brand-link{
+    background:#000000 !important;
+    padding:0 20px;
+    height:100%;
+    display:flex;
+    align-items:center;
+}
+
+.site-nav,
+.mega-panel,
+.mega-panel-shell,
+.mega-detail-panel,
+.mega-info-card,
+.mega-metric,
+.mega-topic-pill{
+    background:#000000 !important;
+}
+
+.nav-shell,
+.site-nav,
+.mega-panel-shell,
+.mega-panel,
+.mega-detail-panel{
+    border-radius:0 !important;
+}
