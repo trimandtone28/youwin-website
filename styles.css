@@ -133,18 +133,17 @@ button {
 }
 
 .brand-wordmark {
-  color: #ffffff;
-  font-size: clamp(1.8rem, 2.2vw, 2.55rem);
+  color: #ffffff !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
   font-weight: 800;
-  letter-spacing: -0.08em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1;
 }
 
 .brand-subtitle {
-  color: var(--text-faint);
-  font-size: 0.66rem;
-  font-weight: 600;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
+  display: none;
 }
 
 .header-actions {
@@ -1081,7 +1080,12 @@ button {
 }
 
 .footer-mark .brand-wordmark {
-  font-size: clamp(1.7rem, 2vw, 2.2rem);
+  color: #ffffff !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .footer-brand p,
@@ -1508,4 +1512,18 @@ button {
     .mega-nav-item:last-child .mega-panel-shell--nested {
         grid-template-columns: 320px 1fr !important;
     }
+}
+/* YOUWIN LOGO FIX */
+
+.brand-link,
+.footer-mark {
+    background: #000000 !important;
+}
+
+.brand-wordmark,
+.footer-mark .brand-wordmark {
+    color: #ffffff !important;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.15em;
 }
