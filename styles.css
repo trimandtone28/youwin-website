@@ -19,8 +19,8 @@
   --radius-lg: 28px;
   --radius-md: 20px;
   --radius-sm: 14px;
-  --container: min(1700px, 87vw);
-  --section-width: min(1700px, 87vw);
+  --container: min(1700px, 96vw);
+  --section-width: min(1700px, 96vw);
   --transition: 220ms ease;
 }
 
@@ -37,13 +37,13 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background: #000000;
+  background:
+    radial-gradient(circle at 10% 12%, rgba(142, 108, 255, 0.13), transparent 24%),
+    radial-gradient(circle at 88% 10%, rgba(111, 71, 255, 0.08), transparent 22%),
+    linear-gradient(180deg, #040404 0%, #09090b 100%);
   color: var(--text);
   font-family: "Inter", "Segoe UI", sans-serif;
   text-rendering: optimizeLegibility;
-}
-main {
-  padding-top: 110px;
 }
 
 body.nav-open {
@@ -88,14 +88,11 @@ button {
 }
 
 .site-header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-  padding: 16px 0;
-  background: rgba(0,0,0,0.96);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 60;
+  padding: 18px 0;
+  transition: padding var(--transition), background var(--transition), border-color var(--transition);
 }
 
 .site-header.is-scrolled {
@@ -106,15 +103,16 @@ button {
   position: relative;
   width: var(--container);
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 42px;
-  padding: 18px 34px;
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 8px;
-  background: rgba(0,0,0,0.95);
-  backdrop-filter: none;
+  gap: 22px;
+  padding: 16px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  background: rgba(8, 8, 10, 0.72);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.25);
 }
 
 .site-header.is-scrolled .nav-shell {
@@ -136,9 +134,9 @@ button {
 
 .brand-wordmark {
   color: #ffffff;
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 2.2vw, 2.55rem);
   font-weight: 800;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.08em;
 }
 
 .brand-subtitle {
@@ -284,14 +282,12 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 18px;
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 6px;
-  background: #000000;
-  color: #ffffff;
-  font-size: 0.96rem;
+  padding: 12px 16px;
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.98rem;
   font-weight: 600;
-  transition: all 0.25s ease;
+  transition: color var(--transition), background var(--transition);
 }
 
 .mega-nav-trigger::after {
@@ -312,8 +308,7 @@ button {
 .mega-nav-trigger:focus-visible,
 .mega-nav-item.is-current > .mega-nav-trigger,
 .mega-nav-item.is-open > .mega-nav-trigger {
-  background: rgba(255,255,255,0.06);
-  border-color: rgba(255,255,255,0.28);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .mega-nav-trigger:hover::after,
@@ -338,21 +333,18 @@ button {
 
 .mega-panel {
   position: absolute;
-  top: calc(100% + 12px);
-
+  top: calc(100% + 18px);
   left: 50%;
-  transform: translateX(-50%);
-
-  width: 780px;
-  max-width: calc(100vw - 40px);
-
+  width: min(780px, calc(100vw - 40px));
+  transform: translateX(-50%) translateY(16px);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
   z-index: 9999;
-
-  transition: all 0.25s ease;
+  transition:
+    opacity 240ms ease,
+    transform 240ms ease,
+    visibility 240ms ease;
 }
 
 .mega-panel::before {
@@ -365,30 +357,24 @@ button {
 }
 
 .mega-nav-item.is-open .mega-panel {
-  opacity: 1; 
+  opacity: 1;
   visibility: visible;
   pointer-events: auto;
-
   transform: translateX(-50%) translateY(0);
 }
+
 .mega-panel-shell {
   display: grid;
-
   grid-template-columns: minmax(250px, 320px) minmax(0, 1fr);
-
   gap: 24px;
-
-  padding: 24px;
-
-  border: 1px solid rgba(255,255,255,0.08);
-
-  background: #000000;
-
-  border-radius: 0;
-
-  box-shadow: none;
-
-  backdrop-filter: none;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(18, 18, 20, 0.9), rgba(10, 10, 12, 0.95)),
+    radial-gradient(circle at top left, rgba(142, 108, 255, 0.16), transparent 36%);
+  backdrop-filter: blur(30px);
+  box-shadow: var(--shadow);
 }
 
 .mega-panel-lead {
@@ -500,22 +486,19 @@ button {
 
 .mega-submenu-button {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   gap: 6px;
-
   padding: 16px 18px;
-
-  border: 1px solid rgba(255,255,255,0.08);
-
-  background: #000000;
-
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
   cursor: pointer;
-
-  transition: all 0.25s ease;
+  transition:
+    border-color var(--transition),
+    background var(--transition),
+    transform var(--transition);
 }
 
 .mega-submenu-button span {
@@ -534,14 +517,11 @@ button {
 
 .mega-detail-panel {
   display: none;
-
   min-height: 100%;
-
   padding: 22px;
-
-  border: 1px solid rgba(255,255,255,0.08);
-
-  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .mega-detail-panel.is-active {
@@ -658,7 +638,9 @@ button {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.72);
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.88) 0%, rgba(5, 5, 5, 0.72) 28%, rgba(5, 5, 5, 0.38) 56%, rgba(5, 5, 5, 0.26) 100%),
+    linear-gradient(180deg, rgba(8, 8, 8, 0.28), rgba(8, 8, 8, 0.56));
 }
 
 .hero-grid,
@@ -697,7 +679,7 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 999px;
   background: rgba(5, 5, 5, 0.34);
-  backdrop-filter: none;
+  backdrop-filter: blur(14px);
 }
 
 .hero-content h1 {
@@ -733,7 +715,12 @@ button {
 
 .section-dark::before {
   content: "";
-  background: transparent;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.26), transparent 78%);
+  opacity: 0.3;
 }
 
 .section-shell,
@@ -775,7 +762,7 @@ button {
 
 .glass-card {
   padding: 28px;
-  backdrop-filter: none;
+  backdrop-filter: blur(24px);
 }
 
 .highlight-card span,
@@ -822,9 +809,10 @@ button {
   align-content: start;
   gap: 14px;
   padding: 20px 18px 22px;
-  border-radius: 12px;
-  background: rgba(0,0,0,0.92);
-  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(13, 20, 39, 0.96), rgba(9, 16, 31, 0.94)),
+    radial-gradient(circle at top left, rgba(142, 108, 255, 0.08), transparent 42%);
   min-height: 216px;
 }
 
@@ -855,8 +843,8 @@ button {
   width: 44px;
   height: 44px;
   margin-bottom: 8px;
-  border-radius: 8px;
-  background: rgba(255,255,255,0.06);
+  border-radius: 14px;
+  background: rgba(79, 55, 168, 0.34);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
   color: var(--text);
   font-size: 0.7rem;
@@ -1189,7 +1177,7 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(10, 10, 12, 0.96);
     box-shadow: var(--shadow);
-   backdrop-filter: none;
+    backdrop-filter: blur(22px);
   }
 
   .site-nav.is-open {
@@ -1337,12 +1325,8 @@ button {
   }
 
   .glass-card {
-  padding: 28px;
-  backdrop-filter: none;
-  background: #000000;
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: none;
-}
+    padding: 22px;
+  }
 
   .hero-description,
   .mega-panel-lead p,
@@ -1367,19 +1351,37 @@ button {
   .services-grid {
     grid-template-columns: 1fr;
   }
+}
 
-  body,
-.section,
+
+/* Fix right-side dropdown overflow */
+.mega-nav-item:nth-last-child(2) .mega-panel,
+.mega-nav-item:last-child .mega-panel {
+  left: auto;
+  right: 0;
+  transform: translateY(16px);
+}
+
+.mega-nav-item:nth-last-child(2).is-open .mega-panel,
+.mega-nav-item:last-child.is-open .mega-panel {
+  transform: translateY(0);
+}
+
 .site-header,
 .nav-shell,
-.hero-frame,
-.glass-card,
-.client-card,
-.job-card,
-.contact-card,
-.form-card,
-.service-card,
-.site-footer {
-  background-color: #000000 !important;
+.site-nav,
+.mega-panel,
+.mega-panel-shell,
+.mega-detail-panel {
+  backdrop-filter: none !important;
 }
+
+.site-nav,
+.mega-panel,
+.mega-panel-shell,
+.mega-detail-panel,
+.mega-info-card,
+.mega-metric,
+.mega-topic-pill {
+  background: #000000 !important;
 }
