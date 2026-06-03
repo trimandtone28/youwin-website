@@ -1446,12 +1446,50 @@ button {
    CAREERS DROPDOWN PERFECT FIX
 ========================================== */
 
-.mega-nav-item:last-child .mega-panel {
-    left: auto !important;
-    right: 0 !important;
-    width: min(1050px, calc(100vw - 80px)) !important;
+/* =====================================
+   CAREERS MENU FINAL FIX
+===================================== */
+
+/* Careers is 2nd from last */
+.mega-nav-item:nth-last-child(2) .mega-panel{
+    left:50% !important;
+    right:auto !important;
+    transform:translateX(-50%) translateY(16px) !important;
+
+    width:760px !important;
+    max-width:760px !important;
 }
 
+.mega-nav-item:nth-last-child(2).is-open .mega-panel{
+    transform:translateX(-50%) translateY(0) !important;
+}
+
+.mega-nav-item:nth-last-child(2) .mega-panel-shell{
+    display:grid;
+    grid-template-columns:240px 1fr !important;
+    gap:20px !important;
+    padding:24px !important;
+}
+
+.mega-nav-item:nth-last-child(2) .mega-panel-grid{
+    grid-template-columns:repeat(2,minmax(180px,1fr)) !important;
+    gap:16px !important;
+}
+
+.mega-nav-item:nth-last-child(2) .mega-panel-lead h3{
+    font-size:1.5rem !important;
+    line-height:1.1 !important;
+}
+
+.mega-nav-item:nth-last-child(2) .mega-info-card,
+.mega-nav-item:nth-last-child(2) .mega-metric{
+    padding:16px !important;
+}
+
+.mega-nav-item:nth-last-child(2) .mega-panel,
+.mega-nav-item:nth-last-child(2) .mega-panel-shell{
+    overflow:hidden !important;
+}
 .mega-nav-item:last-child .mega-panel-shell {
     width: 100%;
     overflow: hidden;
