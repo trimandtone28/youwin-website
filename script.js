@@ -599,3 +599,23 @@ if (contactForm && formFeedback) {
     contactForm.reset();
   });
 }
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", function () {
+
+  let currentScroll =
+    window.pageYOffset ||
+    document.documentElement.scrollTop;
+
+  if (currentScroll > lastScrollTop && currentScroll > 100) {
+    document
+      .querySelector(".site-header")
+      .classList.add("hide-nav");
+  } else {
+    document
+      .querySelector(".site-header")
+      .classList.remove("hide-nav");
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
