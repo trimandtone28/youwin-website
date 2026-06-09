@@ -1584,3 +1584,53 @@ body{
   padding-top:110px;
 }
 }
+
+/* ABOUT US MAIN CONTENT */
+
+.about-card p{
+    color:#ffffff !important;
+    font-size:22px !important;
+    font-weight:700 !important;
+    line-height:1.9 !important;
+}
+
+/* MISSION & VISION TEXT */
+
+.highlight-card p{
+    color:#ffffff !important;
+    font-size:22px !important;
+    font-weight:700 !important;
+    line-height:1.7 !important;
+}
+
+/* MISSION / VISION / CORE VALUES HEADING */
+
+.highlight-card span,
+.values-card span{
+    color:#ffffff !important;
+    font-size:22px !important;
+    font-weight:900 !important;
+    letter-spacing:3px !important;
+}
+
+/* CORE VALUES PILLS */
+
+.pill-list li{
+    color:#ffffff !important;
+    font-size:20px !important;
+    font-weight:800 !important;
+    border:1px solid rgba(255,255,255,.25) !important;
+}
+
+/* ABOUT SECTION TITLE */
+
+.section-head h2{
+    color:#ffffff !important;
+    font-weight:900 !important;
+}
+
+/* REMOVE EXPLORE MORE */
+
+.text-link{
+    display:none !important;
+}
