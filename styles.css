@@ -1654,7 +1654,7 @@ body{
 .about-card p{
     color:#ffffff !important;
     text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:24px !important;
+    font-size:21px !important;
     font-weight:600 !important;
     line-height:1.8 !important;
 }
@@ -1664,7 +1664,7 @@ body{
 .highlight-card p{
     color:#ffffff !important;
     text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:22px !important;
+    font-size:19px !important;
     font-weight:600 !important;
     line-height:1.6 !important;
 }
@@ -1675,7 +1675,7 @@ body{
 .values-card span{
     color:#ffffff !important;
     text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:20px !important;
+    font-size:18px !important;
     font-weight:800 !important;
     letter-spacing:2px !important;
 }
@@ -1685,6 +1685,6 @@ body{
 .pill-list li{
     color:#ffffff !important;
     text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:18px !important;
+    font-size:16px !important;
     font-weight:700 !important;
 }
