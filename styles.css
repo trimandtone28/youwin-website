@@ -1654,7 +1654,7 @@ body{
 .about-card p{
    color:#ffffff !important;
 text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:28px !important;
+    font-size:24px !important;
     font-weight:700 !important;
     line-height:1.9 !important;
 }
@@ -1664,7 +1664,7 @@ text-shadow:0 0 10px rgba(255,255,255,.15);
 .highlight-card p{
  color:#ffffff !important;
 text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:28px !important;
+    font-size:24px !important;
     font-weight:700 !important;
     line-height:1.7 !important;
 }
@@ -1675,7 +1675,7 @@ text-shadow:0 0 10px rgba(255,255,255,.15);
 .values-card span{
   color:#ffffff !important;
 text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:24px !important;
+    font-size:22px !important;
     font-weight:900 !important;
     letter-spacing:3px !important;
 }
@@ -1695,10 +1695,8 @@ text-shadow:0 0 10px rgba(255,255,255,.15);
 .section-head h2{
   color:#ffffff !important;
 text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:clamp(4rem,6vw,6rem) !important;
-    font-weight:900 !important;
-    line-height:1.1 !important;
-}
+      font-weight:900 !important;
+  }
 
 /* REMOVE EXPLORE MORE */
 
