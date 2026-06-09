@@ -1649,42 +1649,51 @@ body{
     border-radius:50px !important;
 }
 
-/* ABOUT US PARAGRAPHS */
+/* ABOUT US BOX */
+
+.about-card{
+    padding:24px !important;
+}
 
 .about-card p{
     color:#ffffff !important;
-    text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:21px !important;
+    text-shadow:0 0 8px rgba(255,255,255,.12);
+    font-size:18px !important;
     font-weight:600 !important;
-    line-height:1.8 !important;
+    line-height:1.7 !important;
 }
 
-/* MISSION & VISION TEXT */
+/* MISSION / VISION BOXES */
+
+.highlight-card,
+.values-card{
+    padding:22px !important;
+}
 
 .highlight-card p{
     color:#ffffff !important;
-    text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:19px !important;
+    text-shadow:0 0 8px rgba(255,255,255,.12);
+    font-size:16px !important;
     font-weight:600 !important;
     line-height:1.6 !important;
 }
 
-/* MISSION / VISION / CORE VALUES HEADINGS */
+/* HEADINGS */
 
 .highlight-card span,
 .values-card span{
     color:#ffffff !important;
-    text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:18px !important;
+    text-shadow:0 0 8px rgba(255,255,255,.12);
+    font-size:16px !important;
     font-weight:800 !important;
-    letter-spacing:2px !important;
+    letter-spacing:1px !important;
 }
 
 /* CORE VALUES */
 
 .pill-list li{
     color:#ffffff !important;
-    text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:16px !important;
+    font-size:15px !important;
     font-weight:700 !important;
+    padding:10px 14px !important;
 }
