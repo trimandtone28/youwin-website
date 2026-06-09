@@ -1590,7 +1590,7 @@ body{
 .about-card p{
    color:#ffffff !important;
 text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:24px !important;
+    font-size:22px !important;
     font-weight:700 !important;
     line-height:1.9 !important;
 }
@@ -1600,7 +1600,7 @@ text-shadow:0 0 10px rgba(255,255,255,.15);
 .highlight-card p{
  color:#ffffff !important;
 text-shadow:0 0 10px rgba(255,255,255,.15);
-    font-size:24px !important;
+    font-size:22px !important;
     font-weight:700 !important;
     line-height:1.7 !important;
 }
@@ -1631,7 +1631,7 @@ text-shadow:0 0 10px rgba(255,255,255,.15);
 .section-head h2{
   color:#ffffff !important;
 text-shadow:0 0 10px rgba(255,255,255,.15);
-      font-weight:900 !important;
+      font-weight:700 !important;
   }
 
 /* REMOVE EXPLORE MORE */
