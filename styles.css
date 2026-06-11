@@ -1431,13 +1431,16 @@ button {
 }
 
 .nav-shell{
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 !important;
+
     background:#000000 !important;
     border-radius:0 !important;
-    border:1px solid #111 !important;
-    backdrop-filter:none !important;
+    border:none !important;
     box-shadow:none !important;
 
-    padding:10px 24px !important;
+    padding:6px 24px !important;
 }
 
 .site-header.is-scrolled .nav-shell{
@@ -1756,9 +1759,9 @@ body,
     box-shadow:none !important;
 }
 .site-header{
-    padding:4px 0 !important;
+    padding:0px !important;
 }
 
 body{
-    padding-top:75px !important;
+    padding-top:65px !important;
 }
