@@ -144,7 +144,7 @@ button {
 
 .brand-wordmark{
     color:#ffffff;
-    font-size:clamp(3.8rem,5vw,6rem);
+    font-size:clamp(2.4rem,3.5vw,3.8rem);
     font-weight:900;
     letter-spacing:0.18em;
     text-transform:uppercase;
@@ -157,9 +157,9 @@ button {
     display:block;
     width:100%;
     margin-top:12px;
-    font-size:18px;
+    font-size:12px;
     font-weight:500;
-    letter-spacing:0.45em;
+    letter-spacing:0.35em;
     color:#ffffff;
     text-transform:uppercase;
     text-align:center;
