@@ -136,17 +136,20 @@ button {
 .brand-mark{
   display:flex;
   flex-direction:column;
-  gap:4px;
+  align-items:center;
+  text-align:center;
   line-height:1;
 }
+
 .brand-tagline{
   display:block;
-  margin-top:8px;
-  font-size:11px;
+  margin-top:16px;
+  font-size:18px;
   font-weight:500;
-  letter-spacing:0.35em;
+  letter-spacing:0.45em;
+  color:rgba(255,255,255,0.88);
   text-transform:uppercase;
-  color:rgba(255,255,255,.75);
+  text-align:center;
 }
 .brand-wordmark {
   color: #ffffff;
