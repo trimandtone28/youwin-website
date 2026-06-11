@@ -1768,16 +1768,16 @@ body{
 /* NAVBAR + HERO FULL SPACING FIX */
 
 .site-header{
-    top:1.5cm !important;     /* 1.5cm space above navbar */
+    top:0.4cm !important;     /* 1.5cm space above navbar */
     padding:0 !important;
 }
 
 .nav-shell{
-    width:calc(100% - 2cm) !important;
-    max-width:none !important;
-    margin:0 auto !important;
-    padding:6px 24px !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin:0 !important;
     border-radius:0 !important;
+    padding:6px 24px !important;
 }
 
 .hero-section{
