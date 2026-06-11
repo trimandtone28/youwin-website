@@ -664,6 +664,7 @@ button {
 .hero-overlay {
   position: absolute;
   inset: 0;
+    z-index: 1;
   background:
     linear-gradient(90deg, rgba(5, 5, 5, 0.88) 0%, rgba(5, 5, 5, 0.72) 28%, rgba(5, 5, 5, 0.38) 56%, rgba(5, 5, 5, 0.26) 100%),
     linear-gradient(180deg, rgba(8, 8, 8, 0.28), rgba(8, 8, 8, 0.56));
@@ -677,6 +678,7 @@ button {
 }
 
 .hero-grid {
+    z-index: 2;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
@@ -687,10 +689,10 @@ button {
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 18px;
   width: min(13.6cm, 46%);
   min-height: 100%;
