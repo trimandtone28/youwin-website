@@ -1765,3 +1765,32 @@ body,
 body{
     padding-top:65px !important;
 }
+/* NAVBAR + HERO FULL SPACING FIX */
+
+.site-header{
+    top:1.5cm !important;     /* 1.5cm space above navbar */
+    padding:0 !important;
+}
+
+.nav-shell{
+    width:calc(100% - 2cm) !important;
+    max-width:none !important;
+    margin:0 auto !important;
+    padding:6px 24px !important;
+    border-radius:0 !important;
+}
+
+.hero-section{
+    margin-top:1.5cm !important;   /* 1.5cm gap below navbar */
+}
+
+.hero-shell{
+    width:calc(100% - 2cm) !important;   /* 1cm left + 1cm right */
+    max-width:none !important;
+    margin:0 auto !important;
+}
+
+.hero-frame{
+    width:100% !important;
+    max-width:none !important;
+}
