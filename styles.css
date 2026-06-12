@@ -1887,6 +1887,8 @@ body{
     display:none !important;
 }
 
+/* CLIENTS SECTION - FULL WIDTH ALIGNMENT */
+
 .featured-title{
     font-size:2rem;
     font-weight:700;
@@ -1896,9 +1898,10 @@ body{
 
 .client-row{
     display:grid;
-    grid-template-columns:340px 1fr;
+    grid-template-columns:45% 55%;
     align-items:center;
-    gap:60px;
+    gap:20px;
+    width:100%;
     margin-bottom:60px;
 }
 
@@ -1930,21 +1933,39 @@ body{
     align-items:center;
     justify-content:flex-start;
     height:100%;
+    width:100%;
 }
 
 .client-role-large{
-    max-width:420px;
+    width:100%;
+    max-width:none;
+
     font-size:0.95rem;
     font-weight:700;
+
     text-transform:uppercase;
     text-align:left;
+
     line-height:1.6;
     letter-spacing:0.08em;
+
     color:rgba(255,255,255,0.75);
     margin:0;
 }
 
+.client-summary{
+    width:100%;
+    max-width:none;
+    padding:40px;
+}
+
+.clients-layout{
+    width:100%;
+    grid-template-columns:1fr;
+}
+
 @media(max-width:1024px){
+
     .client-row{
         grid-template-columns:1fr;
         gap:24px;
