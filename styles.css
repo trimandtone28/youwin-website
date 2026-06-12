@@ -1886,3 +1886,55 @@ body{
 .form-feedback{
     display:none !important;
 }
+.featured-title{
+    font-size:3rem;
+    font-weight:800;
+    margin:50px 0 40px;
+    color:#ffffff;
+}
+
+.client-row{
+    display:grid;
+    grid-template-columns:520px 1fr;
+    align-items:center;
+    gap:80px;
+    margin-bottom:80px;
+}
+
+.client-logo-block h3{
+    text-align:center;
+    font-size:2.4rem;
+    font-weight:700;
+    color:#ffffff;
+    margin-bottom:25px;
+}
+
+.client-logo-large{
+    width:480px;
+    height:auto;
+    display:block;
+    margin:auto;
+    object-fit:contain;
+}
+
+.client-role-large{
+    font-size:1.25rem;
+    font-weight:700;
+    text-transform:uppercase;
+    text-align:center;
+    line-height:1.4;
+    letter-spacing:.02em;
+    color:#ffffff;
+}
+
+@media(max-width:1024px){
+    .client-row{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .client-logo-large{
+        width:100%;
+        max-width:450px;
+    }
+}
