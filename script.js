@@ -7,7 +7,7 @@ const formFeedback = document.querySelector("#form-feedback");
 const revealElements = document.querySelectorAll(".reveal");
 const sectionElements = document.querySelectorAll("main section[id]");
 
-const CONTACT_EMAIL = "hr_india@youwin.com";
+const CONTACT_EMAIL = "info_india@youwin.com";
 const desktopQuery = window.matchMedia("(min-width: 1024px)");
 
 const megaMenuData = [
