@@ -1768,7 +1768,7 @@ body{
 /* NAVBAR + HERO FULL SPACING FIX */
 
 .site-header{
-    top:0.4cm !important;     /* 1.5cm space above navbar */
+    top:0cm !important;     /* 1.5cm space above navbar */
     padding:0 !important;
 }
 
