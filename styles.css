@@ -1795,43 +1795,94 @@ body{
     max-width:none !important;
 }
 
-/* CONTACT SECTION PERFECT BOX ALIGNMENT */
+/* CONTACT SECTION - REFERENCE DESIGN */
 
-.contact-grid{
-    display:grid !important;
-    grid-template-columns:repeat(2,1fr) !important;
-    gap:24px !important;
-    align-items:stretch !important;
+.contact-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:start;
 }
 
-.contact-card,
-.contact-method,
-.contact-channel,
-.mega-info-card{
-    height:220px !important;
-    min-height:220px !important;
-    width:100% !important;
-
-    display:flex !important;
-    flex-direction:column !important;
-    justify-content:center !important;
-    align-items:center !important;
-    text-align:center !important;
-
+.contact-card{
     background:#000000 !important;
-    border:1px solid rgba(255,255,255,0.08) !important;
-    border-radius:32px !important;
-    box-sizing:border-box !important;
+    border:none !important;
+    box-shadow:none !important;
+    padding:0 !important;
 }
 
-.contact-card h4,
-.contact-method h4,
-.contact-channel h4{
-    margin-bottom:12px !important;
+.contact-card h2{
+    font-size:4rem;
+    color:#fff;
+    margin-bottom:40px;
+    font-weight:700;
 }
 
-.contact-card p,
-.contact-method p,
-.contact-channel p{
-    margin:0 !important;
+.contact-card p{
+    color:rgba(255,255,255,.88);
+    font-size:1.15rem;
+    line-height:1.8;
+}
+
+.contact-lines{
+    margin-top:50px;
+}
+
+.contact-lines div{
+    margin-bottom:40px;
+}
+
+.contact-lines span{
+    display:block;
+    font-size:1rem;
+    margin-bottom:10px;
+    color:#fff;
+}
+
+.contact-lines a,
+.contact-lines p{
+    font-size:2rem;
+    color:#fff;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    background:#000;
+    color:#fff;
+    border:1px solid rgba(255,255,255,.25);
+}
+
+.contact-form input{
+    height:56px;
+    border-radius:999px;
+    padding:0 20px;
+}
+
+.contact-form textarea{
+    min-height:140px;
+    border-radius:30px;
+    padding:20px;
+}
+
+.contact-submit{
+    width:180px;
+    height:54px;
+    border:none;
+    border-radius:999px;
+    background:#ffffff;
+    color:#000;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.contact-topics,
+.contact-metrics,
+.form-feedback{
+    display:none !important;
 }
