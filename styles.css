@@ -1794,3 +1794,44 @@ body{
     width:100% !important;
     max-width:none !important;
 }
+
+/* CONTACT SECTION PERFECT BOX ALIGNMENT */
+
+.contact-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:24px !important;
+    align-items:stretch !important;
+}
+
+.contact-card,
+.contact-method,
+.contact-channel,
+.mega-info-card{
+    height:220px !important;
+    min-height:220px !important;
+    width:100% !important;
+
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:center !important;
+    align-items:center !important;
+    text-align:center !important;
+
+    background:#000000 !important;
+    border:1px solid rgba(255,255,255,0.08) !important;
+    border-radius:32px !important;
+    box-sizing:border-box !important;
+}
+
+.contact-card h4,
+.contact-method h4,
+.contact-channel h4{
+    margin-bottom:12px !important;
+}
+
+.contact-card p,
+.contact-method p,
+.contact-channel p{
+    margin:0 !important;
+}
