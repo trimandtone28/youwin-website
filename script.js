@@ -7,7 +7,7 @@ const formFeedback = document.querySelector("#form-feedback");
 const revealElements = document.querySelectorAll(".reveal");
 const sectionElements = document.querySelectorAll("main section[id]");
 
-const CONTACT_EMAIL = "info_india@youwin.com";
+const CONTACT_EMAIL = "info@youwinglobal.com";
 const desktopQuery = window.matchMedia("(min-width: 1024px)");
 
 const megaMenuData = [
@@ -128,8 +128,7 @@ const megaMenuData = [
       description:
         "Explore how careers at YOUWIN can grow across engineering, cloud, data, sales, and client-facing delivery functions.",
       metrics: [
-        { value: "3", label: "core talent tracks" },
-        { value: "Growth", label: "learning-driven environment" }
+     { value: "Growth", label: "learning-driven environment" }
       ],
       ctaLabel: "Explore Now",
       ctaHref: "careers.html"
@@ -145,10 +144,7 @@ const megaMenuData = [
       title: "Reach the YOUWIN team through the channel that best fits your need.",
       description:
         "For business enquiries, hiring conversations, partnerships, and follow-up support, we route communication directly through our team.",
-      metrics: [
-        { value: "1", label: "primary email channel" },
-        { value: "Direct", label: "team-routed communication" }
-      ],
+      metrics: [],
       topics: ["Business Enquiries", "Partnerships", "Recruitment", "Support & Follow-up"],
       ctaLabel: "Go to Contact Section",
       ctaHref: "#contact"
