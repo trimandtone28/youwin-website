@@ -141,7 +141,7 @@ button {
 
 .brand-wordmark{
     color:#A100FF;
-    font-size:clamp(1.25rem,1.82vw,1.95rem);
+    font-size:clamp(1.56rem,2.28vw,2.44rem);
     font-weight:900;
     letter-spacing:0.18em;
     text-transform:uppercase;
