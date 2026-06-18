@@ -3,7 +3,6 @@ const siteNav = document.querySelector("#site-navigation");
 const navList = document.querySelector("#mega-nav-list");
 const siteHeader = document.querySelector(".site-header");
 const contactForm = document.querySelector("#contact-form");
-const formFeedback = document.querySelector("#form-feedback");
 const revealElements = document.querySelectorAll(".reveal");
 const sectionElements = document.querySelectorAll("main section[id]");
 
@@ -568,33 +567,7 @@ const revealObserver = new IntersectionObserver(
 
 revealElements.forEach((element) => revealObserver.observe(element));
 
-if (contactForm && formFeedback) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
 
-    const formData = new FormData(contactForm);
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const phone = String(formData.get("phone") || "").trim();
-    const message = String(formData.get("message") || "").trim();
-
-    const body = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Phone: ${phone || "Not provided"}`,
-      "",
-      message
-    ].join("\n");
-
-    const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-      "YOUWIN Website Enquiry"
-    )}&body=${encodeURIComponent(body)}`;
-
-    window.location.href = mailtoUrl;
-    formFeedback.textContent = "Your email app is opening with the message prepared.";
-    contactForm.reset();
-  });
-}
 let lastScrollTop = 0;
 
 window.addEventListener("scroll", function () {
