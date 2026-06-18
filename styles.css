@@ -1793,6 +1793,7 @@ body{
 .hero-frame{
     width:100% !important;
     max-width:none !important;
+   
 }
 
 /* CONTACT SECTION - REFERENCE DESIGN */
@@ -2228,4 +2229,13 @@ body{
 
 .contact-card{
     padding-right:30px;
+}
+/* MOVE HERO VIDEO UP */
+
+.hero-section{
+    margin-top:0 !important;
+}
+
+.hero-frame{
+    margin-top:-1.5cm !important;
 }
