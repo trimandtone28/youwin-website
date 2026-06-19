@@ -2286,3 +2286,38 @@ body{
 .about-card p:last-child{
     margin-bottom:0 !important;
 }
+/* CONTACT US - MATCH MISSION & VISION STYLE */
+
+/* EMAIL / PHONE / LOCATION */
+
+.contact-lines span{
+    color:#ffffff !important;
+    font-size:1rem !important;
+    font-weight:800 !important;
+    letter-spacing:0.08em !important;
+    text-transform:uppercase !important;
+    margin-bottom:14px !important;
+    text-shadow:none !important;
+}
+
+/* CONTACT DETAILS */
+
+.contact-lines a,
+.contact-lines p{
+    color:rgba(245,246,251,0.78) !important;
+    font-size:0.96rem !important;
+    font-weight:400 !important;
+    line-height:1.75 !important;
+    text-shadow:none !important;
+    text-decoration:none !important;
+}
+
+.contact-lines a:hover{
+    color:#ffffff !important;
+}
+
+/* SPACING */
+
+.contact-lines div{
+    margin-bottom:24px !important;
+}
