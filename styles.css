@@ -2242,24 +2242,47 @@ body{
     text-shadow: none !important;
 }
 
-/* MISSION & VISION TITLES */
+/* ABOUT US, MISSION, VISION, CORE VALUES */
+
+.about-card p,
+.highlight-card p{
+    color: rgba(245,246,251,0.78) !important;
+    font-size: 0.96rem !important;
+    font-weight: 400 !important;
+    line-height: 1.75 !important;
+    text-shadow: none !important;
+}
+
+/* KEEP HEADINGS BOLD */
 
 .highlight-card span,
 .values-card span{
-    color: rgba(255,255,255,0.65) !important;
-    font-size: 0.82rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.12em !important;
-    text-transform: uppercase !important;
-    margin-bottom: 12px !important;
+    color:#ffffff !important;
+    font-size:1rem !important;
+    font-weight:800 !important;
+    letter-spacing:0.08em !important;
+    text-transform:uppercase !important;
+    margin-bottom:14px !important;
+    text-shadow:none !important;
+}
+
+/* CORE VALUES ITEMS */
+
+.pill-list li{
+    color:rgba(245,246,251,0.78) !important;
+    font-size:0.96rem !important;
+    font-weight:600 !important;
+    line-height:1.4 !important;
+    border:1px solid rgba(255,255,255,0.08) !important;
+    background:#000000 !important;
 }
 
 /* ABOUT US PARAGRAPH SPACING */
 
 .about-card p{
-    margin-bottom: 22px !important;
+    margin-bottom:22px !important;
 }
 
 .about-card p:last-child{
-    margin-bottom: 0 !important;
+    margin-bottom:0 !important;
 }
