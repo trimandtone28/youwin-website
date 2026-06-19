@@ -2230,3 +2230,36 @@ body{
 .contact-card{
     padding-right:30px;
 }
+/* ABOUT US + MISSION + VISION TEXT STYLE */
+
+.about-card p,
+.highlight-card p,
+.values-card p{
+    color: rgba(245,246,251,0.78) !important;
+    font-size: 0.96rem !important;
+    font-weight: 400 !important;
+    line-height: 1.75 !important;
+    text-shadow: none !important;
+}
+
+/* MISSION & VISION TITLES */
+
+.highlight-card span,
+.values-card span{
+    color: rgba(255,255,255,0.65) !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    margin-bottom: 12px !important;
+}
+
+/* ABOUT US PARAGRAPH SPACING */
+
+.about-card p{
+    margin-bottom: 22px !important;
+}
+
+.about-card p:last-child{
+    margin-bottom: 0 !important;
+}
